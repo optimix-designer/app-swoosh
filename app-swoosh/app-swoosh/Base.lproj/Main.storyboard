@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeWC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeWC" customModule="app_swoosh" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -84,19 +84,15 @@
                             <constraint firstItem="RP5-i7-hJM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zjg-mz-uiQ"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="SBI-5y-REl" id="iIu-lZ-5M1"/>
-                        <outlet property="swoosh" destination="RPg-jQ-D2Q" id="u0B-59-oRn"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="BIh-7S-A5e">
             <objects>
-                <viewController id="g5Y-Q5-jAG" sceneMemberID="viewController">
+                <viewController id="g5Y-Q5-jAG" customClass="LeagueVC" customModule="app_swoosh" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tvR-nz-MwC"/>
                         <viewControllerLayoutGuide type="bottom" id="oDf-F8-NyB"/>
@@ -168,13 +164,15 @@
                                 <rect key="frame" x="16" y="589" width="343" height="54"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.39752327129999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="9p1-ao-r7j"/>
                                     <constraint firstAttribute="height" constant="54" id="qLV-AJ-3j1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="g5Y-Q5-jAG" eventType="touchUpInside" id="OQl-3Z-ggU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY3-CV-4hb">
                                 <rect key="frame" x="0.0" y="10" width="80" height="80"/>
@@ -206,16 +204,19 @@
                             <constraint firstItem="0DI-fX-e4t" firstAttribute="top" secondItem="EyG-nP-6IY" secondAttribute="top" id="xDv-3p-zpg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="575-ST-5Mg" kind="show" identifier="skillVCSegue" id="mYi-67-LmL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HqX-fX-Qqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zY8-un-Rpa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="823.20000000000005" y="122.78860569715144"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="lJg-oe-uqK">
             <objects>
-                <viewController id="575-ST-5Mg" sceneMemberID="viewController">
+                <viewController id="575-ST-5Mg" customClass="SkillVC" customModule="app_swoosh" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FhW-cq-UKv"/>
                         <viewControllerLayoutGuide type="bottom" id="cIq-Z0-q2O"/>
